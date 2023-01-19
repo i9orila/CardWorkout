@@ -7,23 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED460F8D297869CE0018C1F1 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED460F8C297869CE0018C1F1 /* Card.swift */; };
 		ED5217F02978423D00178886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5217EF2978423D00178886 /* AppDelegate.swift */; };
 		ED5217F22978423D00178886 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5217F12978423D00178886 /* SceneDelegate.swift */; };
-		ED5217F42978423D00178886 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5217F32978423D00178886 /* ViewController.swift */; };
 		ED5217F72978423D00178886 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5217F52978423D00178886 /* Main.storyboard */; };
 		ED5217F92978423E00178886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5217F82978423E00178886 /* Assets.xcassets */; };
 		ED5217FC2978423E00178886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5217FA2978423E00178886 /* LaunchScreen.storyboard */; };
+		ED5218052978443C00178886 /* CardSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5218042978443C00178886 /* CardSelectionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED460F8C297869CE0018C1F1 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		ED5217EC2978423D00178886 /* CardWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5217EF2978423D00178886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED5217F12978423D00178886 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ED5217F32978423D00178886 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ED5217F62978423D00178886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED5217F82978423E00178886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED5217FB2978423E00178886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED5217FD2978423E00178886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED5218032978429100178886 /* CardWorkout.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardWorkout.entitlements; sourceTree = "<group>"; };
+		ED5218042978443C00178886 /* CardSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +59,11 @@
 		ED5217EE2978423D00178886 /* CardWorkout */ = {
 			isa = PBXGroup;
 			children = (
+				ED5218032978429100178886 /* CardWorkout.entitlements */,
 				ED5217EF2978423D00178886 /* AppDelegate.swift */,
 				ED5217F12978423D00178886 /* SceneDelegate.swift */,
-				ED5217F32978423D00178886 /* ViewController.swift */,
+				ED5218042978443C00178886 /* CardSelectionVC.swift */,
+				ED460F8C297869CE0018C1F1 /* Card.swift */,
 				ED5217F52978423D00178886 /* Main.storyboard */,
 				ED5217F82978423E00178886 /* Assets.xcassets */,
 				ED5217FA2978423E00178886 /* LaunchScreen.storyboard */,
@@ -138,9 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED5217F42978423D00178886 /* ViewController.swift in Sources */,
 				ED5217F02978423D00178886 /* AppDelegate.swift in Sources */,
 				ED5217F22978423D00178886 /* SceneDelegate.swift in Sources */,
+				ED5218052978443C00178886 /* CardSelectionVC.swift in Sources */,
+				ED460F8D297869CE0018C1F1 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,23 +291,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CardWorkout/CardWorkout.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S7HD7PPB8U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardWorkout/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = i9orila.CardWorkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,23 +324,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CardWorkout/CardWorkout.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S7HD7PPB8U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardWorkout/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = i9orila.CardWorkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
