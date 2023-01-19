@@ -7,26 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED2C20992979693500AC3F90 /* CardSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C20982979693500AC3F90 /* CardSelectionVC.swift */; };
+		ED2C209B29796C7000AC3F90 /* CWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C209A29796C7000AC3F90 /* CWButton.swift */; };
 		ED460F8D297869CE0018C1F1 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED460F8C297869CE0018C1F1 /* Card.swift */; };
 		ED5217F02978423D00178886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5217EF2978423D00178886 /* AppDelegate.swift */; };
 		ED5217F22978423D00178886 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5217F12978423D00178886 /* SceneDelegate.swift */; };
-		ED5217F72978423D00178886 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5217F52978423D00178886 /* Main.storyboard */; };
 		ED5217F92978423E00178886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5217F82978423E00178886 /* Assets.xcassets */; };
 		ED5217FC2978423E00178886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5217FA2978423E00178886 /* LaunchScreen.storyboard */; };
-		ED5218052978443C00178886 /* CardSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5218042978443C00178886 /* CardSelectionVC.swift */; };
+		EDEB79ED2979A95900F8F1BF /* RulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEB79EC2979A95900F8F1BF /* RulesVC.swift */; };
+		EDEB79EF2979BC6100F8F1BF /* UiViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEB79EE2979BC6100F8F1BF /* UiViewController + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED2C20982979693500AC3F90 /* CardSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionVC.swift; sourceTree = "<group>"; };
+		ED2C209A29796C7000AC3F90 /* CWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWButton.swift; sourceTree = "<group>"; };
 		ED460F8C297869CE0018C1F1 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		ED5217EC2978423D00178886 /* CardWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5217EF2978423D00178886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED5217F12978423D00178886 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ED5217F62978423D00178886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED5217F82978423E00178886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED5217FB2978423E00178886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED5217FD2978423E00178886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED5218032978429100178886 /* CardWorkout.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardWorkout.entitlements; sourceTree = "<group>"; };
-		ED5218042978443C00178886 /* CardSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionVC.swift; sourceTree = "<group>"; };
+		EDEB79EC2979A95900F8F1BF /* RulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesVC.swift; sourceTree = "<group>"; };
+		EDEB79EE2979BC6100F8F1BF /* UiViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +66,14 @@
 				ED5218032978429100178886 /* CardWorkout.entitlements */,
 				ED5217EF2978423D00178886 /* AppDelegate.swift */,
 				ED5217F12978423D00178886 /* SceneDelegate.swift */,
-				ED5218042978443C00178886 /* CardSelectionVC.swift */,
+				ED2C20982979693500AC3F90 /* CardSelectionVC.swift */,
+				EDEB79EC2979A95900F8F1BF /* RulesVC.swift */,
+				ED2C209A29796C7000AC3F90 /* CWButton.swift */,
 				ED460F8C297869CE0018C1F1 /* Card.swift */,
-				ED5217F52978423D00178886 /* Main.storyboard */,
 				ED5217F82978423E00178886 /* Assets.xcassets */,
 				ED5217FA2978423E00178886 /* LaunchScreen.storyboard */,
 				ED5217FD2978423E00178886 /* Info.plist */,
+				EDEB79EE2979BC6100F8F1BF /* UiViewController + Ext.swift */,
 			);
 			path = CardWorkout;
 			sourceTree = "<group>";
@@ -132,7 +138,6 @@
 			files = (
 				ED5217FC2978423E00178886 /* LaunchScreen.storyboard in Resources */,
 				ED5217F92978423E00178886 /* Assets.xcassets in Resources */,
-				ED5217F72978423D00178886 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,9 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDEB79EF2979BC6100F8F1BF /* UiViewController + Ext.swift in Sources */,
+				ED2C209B29796C7000AC3F90 /* CWButton.swift in Sources */,
 				ED5217F02978423D00178886 /* AppDelegate.swift in Sources */,
+				EDEB79ED2979A95900F8F1BF /* RulesVC.swift in Sources */,
+				ED2C20992979693500AC3F90 /* CardSelectionVC.swift in Sources */,
 				ED5217F22978423D00178886 /* SceneDelegate.swift in Sources */,
-				ED5218052978443C00178886 /* CardSelectionVC.swift in Sources */,
 				ED460F8D297869CE0018C1F1 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,14 +161,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ED5217F52978423D00178886 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED5217F62978423D00178886 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ED5217FA2978423E00178886 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -299,8 +299,8 @@
 				INFOPLIST_FILE = CardWorkout/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,8 +332,8 @@
 				INFOPLIST_FILE = CardWorkout/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (

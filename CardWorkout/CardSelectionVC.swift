@@ -2,46 +2,95 @@
 //  CardSelectionVC.swift
 //  CardWorkout
 //
-//  Created by I9orila on 18.01.2023.
+//  Created by I9orila on 19.01.2023.
 //
 
 import UIKit
+import SwiftUI
 
 class CardSelectionVC: UIViewController {
     
-    @IBOutlet var cardImageView: UIImageView!
-    
-    var cards: [UIImage] = Card.allValues
-    var timer: Timer!
+    let cardImagwView = UIImageView()
+    let stopButton   = CWButton(backgroundColor: .systemRed, title: "Stop!")
+    let resetButton  = CWButton(backgroundColor: .systemGreen, title: "Reset")
+    let rulesButton  = CWButton(backgroundColor: .systemBlue, title: "Rules")
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startTimer()
-            }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        viewWillDisappear(animated)
-        timer.invalidate()
+        view.backgroundColor = .systemBackground
+        configureUI()
+        
     }
     
-    func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 0.15, target: self, selector: #selector(showRandomImage) , userInfo: nil, repeats: true)
-    }
-    @objc func showRandomImage() {
-        cardImageView.image = cards.randomElement() ?? UIImage(named: "AS")
-        print("Timer fired off")
+    func configureUI() {
+        configureCardImageView()
+        configureStopButton()
+        configureResetButton()
+        configureRulesButton()
     }
     
     
-    
-    @IBAction func stopButtonTapped(_ sender: UIButton) {
-        timer.invalidate()
+    func configureCardImageView() {
+        view.addSubview(cardImagwView)
+        cardImagwView.translatesAutoresizingMaskIntoConstraints = false
+        cardImagwView.image = UIImage(named: "AS")
+        
+        NSLayoutConstraint.activate([
+            cardImagwView.widthAnchor.constraint(equalToConstant: 320),
+            cardImagwView.heightAnchor.constraint(equalToConstant: 420),
+            cardImagwView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cardImagwView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -75)
+        ])
+        
     }
     
-    
-    @IBAction func restartButtonTapped(_ sender: UIButton) {
-        timer.invalidate()
-        startTimer()
+    func configureStopButton() {
+        view.addSubview(stopButton)
+        
+        NSLayoutConstraint.activate([
+            stopButton.widthAnchor.constraint(equalToConstant: 300),
+            stopButton.heightAnchor.constraint(equalToConstant: 50),
+            stopButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stopButton.topAnchor.constraint(equalTo: cardImagwView.bottomAnchor, constant: 30)
+        ])
     }
+    
+    func configureResetButton() {
+        view.addSubview(resetButton)
+        
+        NSLayoutConstraint.activate([
+            resetButton.widthAnchor.constraint(equalToConstant: 140),
+            resetButton.heightAnchor.constraint(equalToConstant: 50),
+            resetButton.leadingAnchor.constraint(equalTo: stopButton.leadingAnchor),
+            resetButton.topAnchor.constraint(equalTo: stopButton.bottomAnchor, constant: 20)
+        ])
+    }
+    
+    func configureRulesButton() {
+        view.addSubview(rulesButton)
+        rulesButton.addTarget(self, action: #selector(presentRulesVC), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            rulesButton.widthAnchor.constraint(equalToConstant: 140),
+            rulesButton.heightAnchor.constraint(equalToConstant: 50),
+            rulesButton.trailingAnchor.constraint(equalTo: stopButton.trailingAnchor),
+            rulesButton.topAnchor.constraint(equalTo: stopButton.bottomAnchor, constant: 20)
+        ])
+    }
+    @objc func presentRulesVC() {
+        present(RulesVC(), animated: true)
+    }
+#if DEBUG
+
+
+@available(iOS 13, *)
+struct InfoVCPreview: PreviewProvider {
+    
+    static var previews: some View {
+        // view controller using programmatic UI
+        CardSelectionVC().toPreview()
+    }
+}
+#endif
 }
