@@ -22,6 +22,7 @@ class RulesVC: UIViewController {
         configureExerciseLabel()
     }
     
+    
     func configureTitleLabel() {
         view.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -30,27 +31,27 @@ class RulesVC: UIViewController {
         titleLabel.textAlignment = .center
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60),
+            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30)
         ])
     }
+    
+    func configureRulesLabel() {
+        view.addSubview(rulesLabel)
+        rulesLabel.translatesAutoresizingMaskIntoConstraints = false
+        rulesLabel.text = "The value of each card represents the number of exercise you do. \n\n J = 11, Q = 12, K = 13, A = 14"
+        rulesLabel.font = .systemFont(ofSize: 19, weight: .semibold)
+        rulesLabel.textAlignment = .center
+        rulesLabel.lineBreakMode = .byWordWrapping
+        rulesLabel.numberOfLines = 0
         
-        func configureRulesLabel() {
-            view.addSubview(rulesLabel)
-            rulesLabel.translatesAutoresizingMaskIntoConstraints = false
-            rulesLabel.text = "The value of each card represents the number of exercise you do. \n\n J = 11, Q = 12, K = 13, A = 14"
-            rulesLabel.font = .systemFont(ofSize: 19, weight: .semibold)
-            rulesLabel.textAlignment = .center
-            rulesLabel.lineBreakMode = .byWordWrapping
-            rulesLabel.numberOfLines = 0
-            
-            NSLayoutConstraint.activate([
-                rulesLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 25),
-                rulesLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-                rulesLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30)
-                ])
-            }
+        NSLayoutConstraint.activate([
+            rulesLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 25),
+            rulesLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            rulesLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30)
+        ])
+    }
     
     func configureExerciseLabel() {
         view.addSubview(exerciseLabel)
@@ -63,22 +64,8 @@ class RulesVC: UIViewController {
             exerciseLabel.topAnchor.constraint(equalTo: rulesLabel.bottomAnchor, constant: 60),
             exerciseLabel.widthAnchor.constraint(equalToConstant: 200),
             exerciseLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-            ])
-        }
-        
-        
-        
+        ])
     }
-    
+}
 
-    #if DEBUG
-   @available(iOS 13, *)
-    struct InfoVCPreview: PreviewProvider {
-        
-        static var previews: some View {
-            RulesVC().toPreview()
-        }
-    }
-    #endif
-    
-    
+

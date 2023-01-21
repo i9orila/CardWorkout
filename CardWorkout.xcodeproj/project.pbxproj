@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED2C20992979693500AC3F90 /* CardSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C20982979693500AC3F90 /* CardSelectionVC.swift */; };
 		ED2C209B29796C7000AC3F90 /* CWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C209A29796C7000AC3F90 /* CWButton.swift */; };
-		ED460F8D297869CE0018C1F1 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED460F8C297869CE0018C1F1 /* Card.swift */; };
+		ED460F8D297869CE0018C1F1 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED460F8C297869CE0018C1F1 /* CardDeck.swift */; };
 		ED5217F02978423D00178886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5217EF2978423D00178886 /* AppDelegate.swift */; };
 		ED5217F22978423D00178886 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5217F12978423D00178886 /* SceneDelegate.swift */; };
 		ED5217F92978423E00178886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5217F82978423E00178886 /* Assets.xcassets */; };
@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		ED2C20982979693500AC3F90 /* CardSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionVC.swift; sourceTree = "<group>"; };
 		ED2C209A29796C7000AC3F90 /* CWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWButton.swift; sourceTree = "<group>"; };
-		ED460F8C297869CE0018C1F1 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		ED460F8C297869CE0018C1F1 /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
 		ED5217EC2978423D00178886 /* CardWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5217EF2978423D00178886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED5217F12978423D00178886 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 				ED5217F12978423D00178886 /* SceneDelegate.swift */,
 				ED2C20982979693500AC3F90 /* CardSelectionVC.swift */,
 				EDEB79EC2979A95900F8F1BF /* RulesVC.swift */,
+				ED460F8C297869CE0018C1F1 /* CardDeck.swift */,
 				ED2C209A29796C7000AC3F90 /* CWButton.swift */,
-				ED460F8C297869CE0018C1F1 /* Card.swift */,
 				ED5217F82978423E00178886 /* Assets.xcassets */,
 				ED5217FA2978423E00178886 /* LaunchScreen.storyboard */,
 				ED5217FD2978423E00178886 /* Info.plist */,
@@ -154,7 +154,7 @@
 				EDEB79ED2979A95900F8F1BF /* RulesVC.swift in Sources */,
 				ED2C20992979693500AC3F90 /* CardSelectionVC.swift in Sources */,
 				ED5217F22978423D00178886 /* SceneDelegate.swift in Sources */,
-				ED460F8D297869CE0018C1F1 /* Card.swift in Sources */,
+				ED460F8D297869CE0018C1F1 /* CardDeck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

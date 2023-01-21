@@ -6,22 +6,41 @@
 //
 
 import UIKit
-import SwiftUI
+
 
 class CardSelectionVC: UIViewController {
     
     let cardImagwView = UIImageView()
-    let stopButton   = CWButton(backgroundColor: .systemRed, title: "Stop!")
-    let resetButton  = CWButton(backgroundColor: .systemGreen, title: "Reset")
-    let rulesButton  = CWButton(backgroundColor: .systemBlue, title: "Rules")
-    
+    let stopButton    = CWButton(backgroundColor: .systemRed, title: "Stop!")
+    let resetButton   = CWButton(backgroundColor: .systemGreen, title: "Reset")
+    let rulesButton   = CWButton(backgroundColor: .systemBlue, title: "Rules")
+    var cards         = CardDeck.allValues
+    var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        startTimer()
         configureUI()
-        
     }
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(showRandomCard), userInfo: nil, repeats: true)
+    }
+    
+    @objc  func showRandomCard() {
+        cardImagwView.image = cards.randomElement()
+    }
+    
+    @objc func stopTimer() {
+        timer.invalidate()
+    }
+    
+    @objc func resetTimer() {
+        timer.invalidate()
+        startTimer()
+    }
+    
     
     func configureUI() {
         configureCardImageView()
@@ -47,6 +66,7 @@ class CardSelectionVC: UIViewController {
     
     func configureStopButton() {
         view.addSubview(stopButton)
+        stopButton.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             stopButton.widthAnchor.constraint(equalToConstant: 300),
@@ -58,6 +78,8 @@ class CardSelectionVC: UIViewController {
     
     func configureResetButton() {
         view.addSubview(resetButton)
+        resetButton.addTarget(self, action: #selector(resetTimer), for: .touchUpInside)
+        
         
         NSLayoutConstraint.activate([
             resetButton.widthAnchor.constraint(equalToConstant: 140),
@@ -81,16 +103,4 @@ class CardSelectionVC: UIViewController {
     @objc func presentRulesVC() {
         present(RulesVC(), animated: true)
     }
-#if DEBUG
-
-
-@available(iOS 13, *)
-struct InfoVCPreview: PreviewProvider {
-    
-    static var previews: some View {
-        // view controller using programmatic UI
-        CardSelectionVC().toPreview()
-    }
-}
-#endif
 }

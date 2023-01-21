@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Card {
+struct CardDeck {
     static var allValues = [
     UIImage(named: "2H")!,
     UIImage(named: "3H")!,
